@@ -1,8 +1,9 @@
+
 import UIKit
 
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     var foods=["orange","apple","banana","tomatos","beans"]
-   
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,6 +20,15 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.cellForRow(at: indexPath)?.accessoryType=UITableViewCell.AccessoryType.checkmark
+        if tableView.cellForRow(at: indexPath)?.accessoryType==UITableViewCell.AccessoryType.checkmark{
+            tableView.cellForRow(at: indexPath)?.accessoryType=UITableViewCell.AccessoryType.none
+            
+        }else{
+            tableView.cellForRow(at: indexPath)?.accessoryType=UITableViewCell.AccessoryType.checkmark
+        }
     }
     
+    
+  
+
+}
