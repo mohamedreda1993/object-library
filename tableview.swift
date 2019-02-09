@@ -19,6 +19,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         cell.textLabel?.text=foods[indexPath.row]
         return cell
     }
+    //how to put checkmark in table view
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView.cellForRow(at: indexPath)?.accessoryType==UITableViewCell.AccessoryType.checkmark{
             tableView.cellForRow(at: indexPath)?.accessoryType=UITableViewCell.AccessoryType.none
